@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chukwuemeka Nwaoha | Web & App Development Tutor</title>
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-M9W1n64Fh4vKmuOSFoH/lb8Zf8lPe7Dqum6fAoq8sMJjMNkRhrpdGvLVc5dfM6bWpI6BuZMBHcpJwFTKf+ZK5A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-color: #0b0f19;
+      color: #e0e0e0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(180deg, #111831, #0b0f19);
+    }
+
+    header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid #007bff;
+      margin-bottom: 15px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #aaa;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .section {
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      color: #00aaff;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    .icon {
+      font-size: 2.5rem;
+      color: #007bff;
+      margin-bottom: 10px;
+      transition: transform 0.4s;
+    }
+
+    .icon:hover {
+      transform: scale(1.2);
+    }
+
+    .cta-btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: #007bff;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .cta-btn:hover {
+      background: #005fcc;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      border-top: 1px solid #1b1f2b;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    footer a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .cta-btn {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://via.placeholder.com/130" alt="Profile Picture" />
+    <h1>Chukwuemeka Nwaoha</h1>
+    <p>Web & Mobile App Development Tutor | React & React Native Specialist</p>
+  </header>
+
+  <div class="container">
+    <section class="section">
+      <i class="fa-solid fa-user icon"></i>
+      <h2>About Me</h2>
+      <p>
+        I’m a passionate software developer and instructor with hands-on
+        experience in building modern web and mobile applications using
+        <strong>React</strong> and <strong>React Native</strong>. I help
+        individuals and aspiring developers gain practical skills to build
+        real-world projects.
+      </p>
+    </section>
+
+    <section class="section">
+      <i class="fa-solid fa-laptop-code icon"></i>
+      <h2>Online Classes</h2>
+      <p>
+        Join our interactive online sessions to learn full-stack web development
+        and mobile app development. Classes are hosted on
+        <strong>Google Classroom</strong> for easy access and collaboration.
+      </p>
+      <a
+        href="#"
+        class="cta-btn"
+        target="_blank"
+        ><i class="fa-brands fa-google-classroom"></i> Join on Google Classroom</a
+      >
+    </section>
+
+    <section class="section">
+      <i class="fa-solid fa-children icon"></i>
+      <h2>Kids Coding Classes</h2>
+      <p>
+        We also offer special coding sessions for kids — introducing them to
+        programming fundamentals, creativity, and problem-solving through
+        engaging hands-on projects.
+      </p>
+    </section>
+
+    <section class="section">
+      <i class="fa-solid fa-address-card icon"></i>
+      <h2>Contact Me</h2>
+      <p>
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:chukwuemekanwaoha77@gmail.com">chukwuemekanwaoha77@gmail.com</a><br />
+        <i class="fa-brands fa-whatsapp"></i>
+        <a href="https://wa.me/2348069225673" target="_blank">+234 806 922 5673</a>
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> Chukwuemeka Nwaoha. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Update year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Fade-in animation on scroll
+    const sections = document.querySelectorAll(".section");
+
+    const revealSection = () => {
+      sections.forEach((section) => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.classList.add("show");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", revealSection);
+    revealSection();
+  </script>
+</body>
+</html>
