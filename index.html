@@ -100,6 +100,16 @@
       transform: scale(1.2);
     }
 
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #00aaff;
+    }
+
     .cta-btn {
       display: inline-block;
       margin-top: 25px;
@@ -115,6 +125,26 @@
     .cta-btn:hover {
       background: #005fcc;
       transform: translateY(-2px);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .contact-links a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
+    }
+
+    .contact-links i {
+      font-size: 1.2rem;
+      color: #00aaff;
     }
 
     footer {
@@ -134,7 +164,6 @@
       text-decoration: underline;
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
       header h1 {
         font-size: 1.5rem;
@@ -147,7 +176,7 @@
 </head>
 <body>
   <header>
-    <img src="profile.jpg" alt="Profile Picture" />
+    <img src="https://via.placeholder.com/130" alt="Profile Picture" />
     <h1>Chukwuemeka Nwaoha</h1>
     <p>Web & Mobile App Development Tutor | React & React Native Specialist</p>
   </header>
@@ -174,7 +203,7 @@
         <strong>Google Classroom</strong> for easy access and collaboration.
       </p>
       <a
-        href="https://classroom.google.com/c/ODExNjQxODI4Njk1?cjc=zjn6v5lf"
+        href="#"
         class="cta-btn"
         target="_blank"
         ><i class="fa-brands fa-google-classroom"></i> Join on Google Classroom</a
@@ -194,12 +223,16 @@
     <section class="section">
       <i class="fa-solid fa-address-card icon"></i>
       <h2>Contact Me</h2>
-      <p>
-        <i class="fa-solid fa-envelope"></i>
-        <a href="mailto:chukwuemekanwaoha77@gmail.com">chukwuemekanwaoha77@gmail.com</a><br />
-        <i class="fa-brands fa-whatsapp"></i>
-        <a href="https://wa.me/2348069225673" target="_blank">+234 806 922 5673</a>
-      </p>
+      <div class="contact-links">
+        <a href="mailto:chukwuemekanwaoha77@gmail.com">
+          <i class="fa-solid fa-envelope"></i>
+          chukwuemekanwaoha77@gmail.com
+        </a>
+        <a href="https://wa.me/2348069225673" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+          +234 806 922 5673
+        </a>
+      </div>
     </section>
   </div>
 
@@ -208,12 +241,11 @@
   </footer>
 
   <script>
-    // Update year automatically
+    // Auto year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Fade-in animation on scroll
+    // Fade-in on scroll
     const sections = document.querySelectorAll(".section");
-
     const revealSection = () => {
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
@@ -222,9 +254,8 @@
         }
       });
     };
-
     window.addEventListener("scroll", revealSection);
     revealSection();
   </script>
 </body>
-</html>
+        </html>
